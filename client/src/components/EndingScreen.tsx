@@ -7,7 +7,7 @@ import type { Ending } from "@/lib/storyData";
 
 interface EndingScreenProps {
   ending: Ending;
-  choices: ("A" | "B")[];
+  choices: ("A" | "B" | "C" | "D")[]; // Updated to handle 4 choices
   onRestart: () => void;
 }
 

@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 interface ChoiceButtonProps {
   text: string;
-  value: 'A' | 'B';
+  value: 'A' | 'B' | 'C' | 'D'; // Updated to handle 4 choices
   onClick: () => void;
   disabled?: boolean;
 }

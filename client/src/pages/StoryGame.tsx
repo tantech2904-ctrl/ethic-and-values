@@ -7,7 +7,7 @@ import { soundManager } from '@/lib/soundEffects';
 
 export default function StoryGame() {
   const [currentSceneIndex, setCurrentSceneIndex] = useState(0);
-  const [choices, setChoices] = useState<('A' | 'B')[]>([]);
+  const [choices, setChoices] = useState<('A' | 'B' | 'C' | 'D')[]>([]); // Updated to handle 4 choices
   const [gameState, setGameState] = useState<'playing' | 'ended'>('playing');
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -37,7 +37,7 @@ export default function StoryGame() {
     }
   }, []);
 
-  const handleChoice = (choice: 'A' | 'B') => {
+  const handleChoice = (choice: 'A' | 'B' | 'C' | 'D') => { // Updated to handle 4 choices
     soundManager.playDecisionSound();
     
     const newChoices = [...choices, choice];

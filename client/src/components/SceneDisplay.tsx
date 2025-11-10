@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/card';
 
 interface SceneDisplayProps {
   scene: Scene;
-  onChoice: (choice: 'A' | 'B') => void;
+  onChoice: (choice: 'A' | 'B' | 'C' | 'D') => void; // Updated to handle 4 choices
 }
 
 export default function SceneDisplay({ scene, onChoice }: SceneDisplayProps) {
